@@ -1,5 +1,6 @@
 django==3.1.2
 djangorestframework==3.12.1
 psycopg2==2.8.6
+Pillow>=5.3.0,<5.4.0
 
 flake8==3.8.4

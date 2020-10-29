@@ -163,10 +163,11 @@ class PrivateRecipeApiTests(TestCase):
         """Test updating a recipe with put"""
         recipe = sample_recipe(user=self.user)
         recipe.tags.add(sample_tag(user=self.user))
-        payload = {'title': 'Spaghetti carbonara',
-                   'time_minutes': 25,
-                   'price': 5.00
-                   }
+        payload = {
+            'title': 'Spaghetti carbonara',
+            'time_minutes': 25,
+            'price': 5.00,
+        }
         url = detail_url(recipe.id)
         self.client.put(url, payload)
         recipe.refresh_from_db()
