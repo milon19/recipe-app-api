@@ -78,12 +78,10 @@ class Recipe(models.Model):
     link = models.CharField(max_length=255, blank=True, null=True)
 
     ingredients = models.ManyToManyField(
-        Ingredient,
-        related_name="ingredients"
+        'Ingredient'
     )
     tags = models.ManyToManyField(
-        Tag,
-        related_name="tags"
+        'Tag'
     )
 
     image = models.ImageField(null=True, upload_to=recipe_image_file_path)
